@@ -1,0 +1,173 @@
+@import url("https://use.typekit.net/ufi6dgu.css");
+@import url("main.css");
+
+:root {
+    --width: 1400px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    width: 100%;
+    background-color: #fafafa;
+    color: #343434;
+}
+
+p,
+ul,
+li {
+    font-family: "sketchnote-text", sans-serif;
+    font-weight: 200;
+    /* font-style: normal; */
+    margin-bottom: 16px;
+}
+
+p em {
+    font-family: "sketchnote-text", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+p strong {
+    font-family: "sketchnote-text", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+p.lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "captain-comic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+}
+
+h3,
+h4,
+h5,
+h6 {
+
+    margin-bottom: 16px;
+}
+
+h4 {
+    border: 4px solid black;
+    box-shadow: inset 6px 6px 1px #fafafa80, 6px 6px 1px #21212180;
+    border-radius: 16px 360px 16px 360px/360px 16px 360px 16px;
+    background-color: lightskyblue;
+    padding-left: 16px;
+}
+
+ul {
+    width: 100%;
+}
+
+li {
+    list-style-position: inside;
+    list-style-image: url('../assets/mark.webp');
+}
+
+main {
+    width: var(--width);
+    margin: 0 auto;
+}
+
+.flex-container,
+.flex-item {
+    border: 4px solid black;
+    box-shadow: inset 6px 6px 1px #fafafa80, 6px 6px 1px #21212180;
+    border-radius: 16px 360px 16px 360px/360px 16px 360px 16px;
+}
+
+.flex-container {
+
+    background-color: orange;
+}
+
+.flex-item {
+    background-color: blueviolet;
+}
+
+.basis {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main>.flex-container {
+    width: fit-content;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 16px auto;
+}
+
+main>.flex-item {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 0px 8px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 1366px) {
+    :root {
+        --width: 1280px;
+    }
+
+}
+
+@media (max-width: 1080px) {
+    :root {
+        --width: 768px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    :root {
+        --width: 720px;
+    }
+
+}
+
+@media (max-width: 425px) {
+    :root {
+        --width: 320px;
+    }
+
+    .flex-container,
+    .flex-item {
+        border: 4px solid black;
+        box-shadow: inset 6px 6px 1px #fafafa80, 6px 6px 1px #21212180;
+        border-radius: 16px 360px 16px 360px/360px 16px 360px 16px;
+    }
+
+    .basis img {
+        width: 100%;
+    }
+
+}

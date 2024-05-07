@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo o Flexbox</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/syntax.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="flex-container">
+            <h1>CSS Flexbox: seu Guia Completo</h1>
+            <p class="lead">Referências, Elementos e Exemplos</p>
+        </div>
+        <div class="flex-item">
+            <h2>Sobre o Flexbox</h2>
+        </div>
+
+        <p>O módulo Flexbox (ou Flexible Box), que é uma recomendação candidata do W3C desde outubro de 2017, veio para
+            facilitar a vida na hora de organizar, alinhar e distribuir o espaço entre os itens de um container, mesmo
+            quando o tamanho deles é incerto ou dinâmico (daí o nome "flexível").</p>
+        <p>A ideia por trás do layout flexível é permitir que o container modifique a largura, altura e ordem dos itens
+            para otimizar o espaço disponível (principalmente para adaptar a qualquer tipo de dispositivo e tamanho de
+            tela). Um container flexível pode expandir os itens para preencher o espaço livre ou encolhê-los para evitar
+            que saiam do limite.</p>
+        <p>O mais legal é que o layout flexível não é amarrado a nenhuma direção, diferente dos layouts tradicionais (o
+            block, que é vertical, e o inline, que é horizontal). Embora esses funcionem bem para páginas, eles não são
+            tão "flexíveis" (esse trocadilho não poderia faltar!) para acomodar aplicações maiores ou mais complexas
+            (especialmente quando falamos de mudanças de orientação, redimensionamento, estiramento, encolhimento etc.).
+        </p>
+        <p>Importante: O layout flexível é mais adequado para componentes de aplicativos e layouts menores, enquanto o
+            Grid é mais indicado para layouts em maior escala.</p>
+        <div class="flex-item">
+            <h2>Base e Terminologia</h2>
+        </div>
+
+        <p>Como o flexbox é um módulo inteiro e não apenas uma propriedade, ele inclui um monte de coisas, como um
+            conjunto completo de propriedades. Algumas dessas propriedades são para o container (o elemento pai, chamado
+            de "flex-container"), enquanto outras são para os filhos (conhecidos como "flex-items").
+        </p>
+        <p>Se o layout "tradicional" se baseia em direções de fluxo em bloco e inline, o layout flexível se baseia em
+            "direções de fluxo flexíveis". A imagem abaixo mostra e explica a ideia central do layout flexível.</p>
+        <div class="basis">
+            <img src="assets/flexbox-axis.webp" alt="">
+        </div>
+        <p>Os itens vão ser organizados seguindo ou o eixo principal (de main-start a main-end) ou o eixo cruzado (de
+            cross-start a cross-end).</p>
+        <ul>
+            <li>
+                <strong>Eixo principal</strong> – O eixo principal de um container flex é o eixo primário ao longo do
+                qual os
+                itens
+                flexíveis são organizados. Lembre-se, não precisa ser necessariamente horizontal; depende da
+                propriedade
+                <code>flex-direction</code>.
+            </li>
+            <li>
+                <strong>Main-start | Main-end</strong> – Os itens flexíveis são colocados dentro do container começando
+                em main-start e indo até main-end.
+            </li>
+            <li>
+                <strong>Tamanho principal</strong> – A largura ou altura de um item flex, o que estiver na dimensão
+                principal, é o tamanho principal do item. A propriedade de tamanho principal de um item flex é ou
+                <code>width</code> ou <code>height</code>, o que estiver na dimensão principal.
+            </li>
+            <li>
+                <strong>Eixo cruzado</strong> – O eixo perpendicular ao eixo principal é chamado de eixo cruzado. Sua
+                direção depende da direção do eixo principal.
+            </li>
+            <li>
+                <strong>Cross-start | Cross-end</strong> – As linhas flex são preenchidas com itens e colocadas no
+                container começando do lado de cross-start do container flex e indo em direção ao lado de cross-end.
+            </li>
+            <li>
+                <strong>Tamanho cruzado</strong> – A largura ou altura de um item flex, o que estiver na dimensão
+                cruzada, é o tamanho cruzado do item. A propriedade de tamanho cruzado é ou <code>width</code> ou
+                <code>height</code>, o que estiver na dimensão cruzada.
+            </li>
+        </ul>
+        <div class="flex-item">
+            <h2>Propriedades do Flexbox</h2>
+        </div>
+
+        <h3>Propriedades dos Elementos Pai (flex-containers)</h3>
+        <article>
+            <div>
+                <h4>display</h4>
+                <p>Isso define um container flex; pode ser inline ou block dependendo do valor dado. Ele ativa um
+                    contexto
+                    flex
+                    para todos os filhos diretos.</p>
+            </div>
+            <div class="css">
+                <code><pre>.flex-container{
+    display: flex;
+    /* ou inline-flex */
+}</pre></code>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h4>flex-direction</h4>
+                <p>Isso define o eixo principal, estabelecendo a direção em que os itens flexíveis são posicionados no
+                    container flex. O Flexbox é, (além do encapsulamento opcional), um conceito de layout em uma única
+                    direção. Pense nos itens flex como sendo organizados principalmente em linhas horizontais ou colunas
+                    verticais.</p>
+            </div>
+
+        </article>
+
+    </main>
+
+</body>
+
+</html>
